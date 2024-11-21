@@ -24,7 +24,47 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository. This project implements:
+
+- Authentication and authorization system with JWT
+- Role-based access control
+- Author and authentication route handlers
+- PostgreSQL database integration
+- API documentation using Swagger
+- Email verification system with tokenized links
+- Automated email notifications for account verification
+
+## Prerequisites
+
+Before running the project, create a `.env.development.local` file in the root directory with the following configuration:
+
+```env
+# Database Configuration
+DATABASE_USER=postgres
+DATABASE_PASSWORD=your_password
+DATABASE_NAME=library
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_SYNCHRONIZE=true
+
+# Authentication
+BCRYPT_SALT=10
+JWT_SECRET=your_secret_key
+JWT_EXPIRES_IN=3600
+
+# Email Verification
+MAIL_VERIFICATION_SECRET=your_secret_key
+MAIL_PORT=587
+MAIL_USER=your_email@gmail.com
+MAIL_HOST=smtp.gmail.com
+MAIL_PASS=your_app_specific_password  # Gmail App-specific password required
+```
+
+> **Note**: For email verification to work, make sure to:
+>
+> 1. Use a valid Gmail account
+> 2. Generate an App-specific password in your Google Account settings
+> 3. Configure your email credentials in the `.env.development.local` file
 
 ## Project setup
 
